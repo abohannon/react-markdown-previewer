@@ -36,7 +36,8 @@ class UserInput extends React.Component {
     const textareaStyle = {
       width: "100%",
       height: "75vh",
-      border: "1px solid grey"
+      border: "1px solid grey",
+      resize: "vertical"
     };
 
     return (
@@ -54,7 +55,9 @@ class UserOutput extends React.Component {
     const outputStyle = {
       width: "100%",
       height: "75vh",
-      textAlign: 'left'
+      textAlign: "left",
+      whiteSpace: "pre-wrap",
+      wordWrap: "break-word"
     };
 
     return (
