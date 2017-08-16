@@ -24,7 +24,6 @@ class App extends React.Component {
   render() {
     return (
       <div className="inner" style={{textAlign: 'center'}}>
-        <h2>React Markdown Previewer</h2>
         <UserInput input={this.state.inputValue} handleInput={this.handleChange}/>
         <UserOutput input={this.state.inputValue}/>
       </div>
@@ -38,13 +37,15 @@ class UserInput extends React.Component {
     const textareaStyle = {
       width: "100%",
       height: "75vh",
-      border: "1px solid grey",
-      resize: "vertical"
+      border: "1px solid rgb(223, 223, 223)",
+      resize: "vertical",
+      fontFamily: "Raleway, sans-serif"
+
     };
 
     return (
       <div className="col-md-6 input-area">
-        <h1>Input</h1>
+        <h1 style={{fontFamily: "Lobster, cursive"}}>Input</h1>
         <textarea className="user-input" style={textareaStyle} value={this.props.input} onChange={this.props.handleInput}/>
       </div>
     );
@@ -66,12 +67,13 @@ class UserOutput extends React.Component {
       width: "100%",
       height: "75vh",
       textAlign: "left",
-      wordWrap: "break-word"
+      wordWrap: "break-word",
+      fontFamily: "Raleway, sans-serif"
     };
 
     return (
       <div className="col-md-6 output-area">
-        <h1>Output</h1>
+        <h1 style={{fontFamily: "Lobster, cursive"}}>Output</h1>
         <div style={outputStyle} dangerouslySetInnerHTML={this.renderMarkup()} />
       </div>
     );
